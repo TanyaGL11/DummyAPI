@@ -51,5 +51,5 @@ owner: string(User id)
 ```
 ## Майнд-Карта
 Данная МК представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
-[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)
+[![Майнд-Карта](https://drive.google.com/file/d/1dA2Dw37BO-E62zNfyxuSkRFX5b0n4_nn/view?usp=sharing)](https://drive.google.com/file/d/1dA2Dw37BO-E62zNfyxuSkRFX5b0n4_nn/view?usp=sharing)
 
