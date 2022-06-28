@@ -4,8 +4,8 @@
 ## Оглавление
 0. [Описание проекта](#Описание-проекта)
 1. [POST](#POST)
-    1. [GET /post (Get List)](#GET--/post-(Get-List))
-    2. [POST /post/create (Create Post)](#POST--/post-/create-(Create-Post))
+    1. [GET /post (Get List)](#GET-/post-(Get-List))
+    2. [POST /post/create (Create Post)](#POST-/post/create-(Create-Post))
     3. [Смешанные списки](#Смешанные-списки)
     4. [Список задач](#Список-задач)
 8. [Ссылки](#Ссылки)
