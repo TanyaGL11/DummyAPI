@@ -50,5 +50,6 @@ owner: string(User id)
 }
 ```
 ## Майнд-Карта
-Данная МК представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для Get List и Create Post
+Данная МК представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
+[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)
 
