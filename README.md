@@ -52,4 +52,4 @@ owner: string(User id)
 ## Майнд-Карта
 Данная МК представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
 ![Майнд-Карта](https://github.com/TanyaGL11/DummyAPI/blob/main/DummyAPI.png "МК")
-https://github.com/TanyaGL11/DummyAPI/blob/main/DummyAPI.xmind
+Также майнд-карту можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/DummyAPI.xmind)
