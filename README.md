@@ -6,6 +6,8 @@
 1. [POST](#POST)
     1. [GET /post (Get List)](#GET-/post-(Get-List))
     2. [POST /post/create (Create Post)](#POST-/post/create-(Create-Post))
+    3. [GET /post (Get List)](#GET-/post-(Get-List))
+    4. [POST /post/create (Create Post)](#POST-/post/create-(Create-Post))
 8. [Майнд-карта](#Майнд-карта)
 9. [Тест-кейсы](#Тест-кейсы)
 10. [Баг-репорты](#Баг-репорты)
