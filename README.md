@@ -63,7 +63,7 @@ owner: string(User id)
 Также майнд-карту можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/DummyAPI.xmind)
 
 ## Коллекция POSTMAN
-В данной коллекции представлялен основной наборн автотестов для возможного регрессионного тестирования POST для **Get List** и **Create Post**.
+В данной коллекции представлялен основной наборн автотестов для регрессионного тестирования POST.
 
 Коллекцию можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/POST.postman_collection.json)
 
