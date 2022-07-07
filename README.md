@@ -74,4 +74,8 @@ owner: string(User id)
 Также были оформлены Баг-репорты в соотвествие с проведенным тестирование.
 Баг-репорты можно посмотреть [тут]().
 
-## Коллекции POSTMAN
+## Коллекция POSTMAN
+Данная коллекция представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
+![Коллекции POSTMAN](https://drive.google.com/file/d/1iolzvRklsCBQ57ZGKxH5Aw72dwsxG2uI/view?usp=sharing "KP")
+![Local.environment POSTMAN](https://drive.google.com/file/d/11wcfXX2w2pOGdes2a2vPuHt01aVGK6Wx/view?usp=sharing "EP")
+Также майнд-карту можно [скачать](https://drive.google.com/file/d/1iolzvRklsCBQ57ZGKxH5Aw72dwsxG2uI/view?usp=sharing)
