@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "b5b5528d-a501-4520-a28a-74ac51beadae",
+		"name": "POST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test create User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"userId\", jsonData.id);\r",
+							"\r",
+							"\r",
+							"pm.test(\"Check body id is string\", function () {\r",
+							"    pm.expect(jsonData.id).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body title\", function () {\r",
+							"    pm.expect(jsonData.title).to.eql(\"mr\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body firstName\", function () {\r",
+							"    pm.expect(jsonData.firstName).to.eql(\"Ив\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body lastName\", function () {\r",
+							"    pm.expect(jsonData.lastName).to.eql(\"Он\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body picture\", function () {\r",
+							"    pm.expect(jsonData.picture).to.eql(\"https://randomuser.me/api/portraits/med/men/23.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body gender\", function () {\r",
+							"    pm.expect(jsonData.gender).to.eql(\"male\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body email\", function () {\r",
+							"    pm.expect(jsonData.email).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body dateOfBirth\", function () {\r",
+							"    pm.expect(jsonData.dateOfBirth).to.eql(\"1964-12-08T00:00:00.000Z\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body phone\", function () {\r",
+							"    pm.expect(jsonData.phone).to.eql(\"(999)-854-5524\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body location.street\", function () {\r",
+							"    pm.expect(jsonData.location.street).to.eql(\"Нагорная\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body location.city\", function () {\r",
+							"    pm.expect(jsonData.location.city).to.eql(\"Москва\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body location.state\", function () {\r",
+							"    pm.expect(jsonData.location.state).to.eql(\"Московская область\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body location.country\", function () {\r",
+							"    pm.expect(jsonData.location.country).to.eql(\"Россия\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body location.timezone\", function () {\r",
+							"    pm.expect(jsonData.location.timezone).to.eql(\"+4:00\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body id is registerDate\", function () {\r",
+							"    pm.expect(jsonData.registerDate).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body id is updatedDate\", function () {\r",
+							"    pm.expect(jsonData.updatedDate).to.be.a('string')\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"mr\",\r\n    \"firstName\": \"Ив\",\r\n    \"lastName\": \"Он\",\r\n    \"picture\": \"https://randomuser.me/api/portraits/med/men/23.jpg\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"dateOfBirth\": \"1964-12-08\",\r\n    \"phone\": \"(999)-854-5524\",\r\n    \"location\": {\r\n        \"street\": \"Нагорная\",\r\n        \"city\": \"Москва\",\r\n        \"state\": \"Московская область\",\r\n        \"country\": \"Россия\",\r\n        \"timezone\": \"+4:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/{{api-v}}/user/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Create:text[6,50],imeg - string,likes-namber(null), tags- array(string), owner-Object",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"postId\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"Check body id,image,text is string\", function () {\r",
+							"    pm.expect(jsonData.id).to.be.a('string')\r",
+							"    pm.expect(jsonData.image).to.be.a('string');\r",
+							"    pm.expect(jsonData.text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body likes is number\", function () {\r",
+							"    pm.expect(jsonData.likes).to.be.a('number');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body tags is array\", function () {\r",
+							"    pm.expect(jsonData.tags).to.be.an('array')\r",
+							"    pm.expect(jsonData.tags[0]).to.be.an('string') \r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner is string\", function () {\r",
+							"    pm.expect(jsonData.owner).to.be.an('Object');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body 50>=text >=6\", function () {\r",
+							"    pm.expect(jsonData.text).to.eql(\"trial1\");\r",
+							"    pm.expect(jsonData.text.length).to.above(5);\r",
+							"    pm.expect(jsonData.text.length).to.below(51);\r",
+							" });\r",
+							"\r",
+							"pm.test(\"Check body likes\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql();\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"https://pnz.pnzreg.ru/upload/iblock/cf9/cf93e4f68760f2bc67e11198fec88271.jpg\",\r\n    \"tags\": [\r\n        \"stylus\",\r\n        \"pen\"\r\n    ],\r\n    \"text\": \"trial1\",\r\n    \"owner\": \"62bab7d808c1ee5945f95cfd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/{{api-v}}/post/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Get_list(page,limit,created:null)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check body data is array\", function () {\r",
+							"    pm.expect(jsonData.data).to.be.an('array')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].id is string\", function () {\r",
+							"    pm.expect(jsonData.data[0].id).to.be.an('String')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[19].id is string\", function () {\r",
+							"    pm.expect(jsonData.data[19].id).to.be.an('String')\r",
+							"});\r",
+							" \r",
+							"pm.test(\"Check body data[20] is undefined\", function () {\r",
+							"    pm.expect(jsonData.data[20]).to.be.an('undefined')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check limit is 20\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql(20);\r",
+							"});\r",
+							"pm.test(\"Check page is 0\", function () {\r",
+							"    pm.expect(jsonData.page).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body total is number\", function () {\r",
+							"    pm.expect(jsonData.total).to.be.a('number')\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62a870e6f1c4d9e96157096c",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-v}}/post",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-v}}",
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "created",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Get_list(page=0,limit=5,created=0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData);\r",
+							"\r",
+							"pm.test(\"Check limit is 5\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql(5);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body page\", function () {\r",
+							"    pm.expect(jsonData.page).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body created\", function () {\r",
+							"    pm.expect(jsonData.created).to.eql(undefined);\r",
+							"});\r",
+							"pm.test(\"Check body created\", function () {\r",
+							"    pm.expect(jsonData.created).to.eql();\r",
+							"});\r",
+							"pm.test(\"Check body page,limit is number\", function () {\r",
+							"    pm.expect(jsonData.page).to.be.a('number');\r",
+							"    pm.expect(jsonData.limit).to.be.a('number');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62a870e6f1c4d9e96157096c",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-v}}/post?page=0&limit=5&created=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-v}}",
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "created",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Get_list(page=999,limit=50,created=1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData);\r",
+							"\r",
+							"pm.test(\"Check limit is 20\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql(50);\r",
+							"    pm.expect(jsonData.limit).to.above(4);\r",
+							"    pm.expect(jsonData.limit).to.below(51);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body page, limit\", function () {\r",
+							"    pm.expect(jsonData.page).to.eql(999);\r",
+							"    pm.expect(jsonData.limit).to.above(-1);\r",
+							"    pm.expect(jsonData.limit).to.below(1000);\r",
+							"});\r",
+							"pm.test(\"Check body created\", function () {\r",
+							"    pm.expect(jsonData.created).to.eql();\r",
+							"});\r",
+							"pm.test(\"Check body page,limit is number\", function () {\r",
+							"    pm.expect(jsonData.page).to.be.a('number');\r",
+							"    pm.expect(jsonData.limit).to.be.a('number');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62a870e6f1c4d9e96157096c",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-v}}/post?page=999&limit=50&created=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-v}}",
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "999"
+						},
+						{
+							"key": "limit",
+							"value": "50"
+						},
+						{
+							"key": "created",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Get_list(postid)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check body id\", function () {\r",
+							"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"postId\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body id is string\", function () {\r",
+							"    pm.expect(jsonData.id).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body image\", function () {\r",
+							"    pm.expect(jsonData.image).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body likes\", function () {\r",
+							"    pm.expect(jsonData.likes).to.be.a('number')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check likes is 0\", function () {\r",
+							"    pm.expect(jsonData.likes).to.be.a('number');\r",
+							"    pm.expect(jsonData.likes).to.eql(0);\r",
+							"});\r",
+							"pm.test(\"Check body link\", function () {\r",
+							"    pm.expect(jsonData.link).to.be.a('string')\r",
+							"});\r",
+							"pm.test(\"Check body tags\", function () {\r",
+							"    pm.expect(jsonData.tags).to.be.a('array')\r",
+							"});\r",
+							"pm.test(\"Check body tags[0]\", function () {\r",
+							"    pm.expect(jsonData.tags[0]).to.be.a('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body text\", function () {\r",
+							"    pm.expect(jsonData.text).to.be.a('string')\r",
+							"});\r",
+							"pm.test(\"Check body 50>=text >=6\", function () {\r",
+							"    pm.expect(jsonData.text.length).to.above(5);\r",
+							"    pm.expect(jsonData.text.length).to.below(51);\r",
+							" });\r",
+							"pm.test(\"Check body publishDate is string\", function () {\r",
+							"    pm.expect(jsonData.publishDate).to.be.an('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body updatedDate is string\", function () {\r",
+							"    pm.expect(jsonData.updatedDate).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner.id is undefined\", function () {\r",
+							"    pm.expect(jsonData.owner.id).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Test array properties\", function () {\r",
+							"pm.expect(jsonData.owner.title).to.not.have.any.keys('mr', 'ms');\r",
+							"});\r",
+							"pm.test(\"Check body owner is firstName\", function () {\r",
+							"    pm.expect(jsonData.owner.firstName).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner is lastName\", function () {\r",
+							"    pm.expect(jsonData.owner.lastName).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner.picture\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.be.an('string')\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62a870e6f1c4d9e96157096c",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-v}}/post/{{postId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-v}}",
+						"post",
+						"{{postId}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "999",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "created",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"postId\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"Check body id,image,text\", function () {\r",
+							"    pm.expect(jsonData.id).to.be.a('string')\r",
+							"    pm.expect(jsonData.image).to.eql(\"123https://pnz.pnzreg.ru/upload/iblock/cf9/cf93e4f68760f2bc67e11198fec88271.jpg\");\r",
+							"    pm.expect(jsonData.image).to.include.be.oneOf([\"http://\",\"https://\"]);\r",
+							"    pm.expect(jsonData.image).to.be.a('string');\r",
+							"    pm.expect(jsonData.text).to.eql(\"trial12\");\r",
+							"    pm.expect(jsonData.text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body likes is number\", function () {\r",
+							"    pm.expect(jsonData.likes).to.be.a('number');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body tags is array\", function () {\r",
+							"    pm.expect(jsonData.tags).to.be.an('array')\r",
+							"    pm.expect(jsonData.tags[0]).to.be.an('string') \r",
+							"    pm.expect(jsonData.tags[0]).to.eql(\"stylus13\");\r",
+							"    pm.expect(jsonData.tags[1]).to.eql(\"pen13\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner is string\", function () {\r",
+							"    pm.expect(jsonData.owner).to.be.an('Object');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body text\", function () {\r",
+							"   pm.expect(jsonData.text).to.eql(\"trial12\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body likes\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql();\r",
+							"});\r",
+							"pm.test(\"Check body publishDate is string\", function () {\r",
+							"    pm.expect(jsonData.publishDate).to.be.an('string')\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body updatedDate is string\", function () {\r",
+							"    pm.expect(jsonData.updatedDate).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner.id is undefined\", function () {\r",
+							"    pm.expect(jsonData.owner.id).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Test array properties\", function () {\r",
+							"pm.expect(jsonData.owner.title).to.not.have.any.keys('mr', 'ms');\r",
+							"});\r",
+							"pm.test(\"Check body owner is firstName\", function () {\r",
+							"    pm.expect(jsonData.owner.firstName).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner is lastName\", function () {\r",
+							"    pm.expect(jsonData.owner.lastName).to.be.an('string')\r",
+							"});\r",
+							"pm.test(\"Check body owner.picture\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.be.an('string')\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"123https://pnz.pnzreg.ru/upload/iblock/cf9/cf93e4f68760f2bc67e11198fec88271.jpg\",\r\n    \"tags\": [\r\n        \"stylus13\",\r\n        \"pen13\"\r\n    ],\r\n    \"text\": \"trial12\",\r\n    \"owner\": \"62aaf5908ce6330fffdc14ec\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}/{{api-v}}/post/{{postId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Post_Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.collectionVariables.get(\"postid\");\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check body id\", function () {\r",
+							"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"postId\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "62a870e6f1c4d9e96157096c",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/{{api-v}}/post/{{postId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{api-v}}",
+						"post",
+						"{{postId}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "999",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "created",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "{{app-id}}",
+			"key": "app-id"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "postId",
+			"value": ""
+		},
+		{
+			"key": "postid",
+			"value": ""
+		}
+	]
+}
