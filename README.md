@@ -75,6 +75,6 @@ owner: string(User id)
 ## Коллекция POSTMAN
 Данная коллекция представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
 ![Коллекции POSTMAN](https://github.com/TanyaGL11/DummyAPI/blob/main/POST.postman_collection.json "KP")
-![Local.environment POSTMAN](https://github.com/TanyaGL11/DummyAPI/commit/78f28d65cbf00de0d3b7b4981587f6a44e7fbce0 "EP")
+![Local.environment POSTMAN](https://github.com/TanyaGL11/DummyAPI/blob/main/Local.postman_environment.json"EP")
 Также коллекцию можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/POST.postman_collection.json)
-Также environment можно [скачать](https://github.com/TanyaGL11/DummyAPI/commit/78f28d65cbf00de0d3b7b4981587f6a44e7fbce0)
+Также environment можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/Local.postman_environment.json)
