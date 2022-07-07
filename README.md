@@ -6,12 +6,10 @@
 1. [POST](#POST)
     1. [GET /post (Get List)](#GET-/post-(Get-List))
     2. [POST /post/create (Create Post)](#POST-/post/create-(Create-Post))
-    3. [GET /post (Get List)](#GET-/post-(Get-List))
-    4. [POST /post/create (Create Post)](#POST-/post/create-(Create-Post))
-8. [Майнд-карта](#Майнд-карта)
-9. [Тест-кейсы](#Тест-кейсы)
-10. [Баг-репорты](#Баг-репорты)
-11. [Коллекции POSTMAN](#Коллекции-POSTMAN)
+2. [Майнд-карта](#Майнд-карта)
+3. [Тест-кейсы](#Тест-кейсы)
+4. [Баг-репорты](#Баг-репорты)
+5. [Коллекции POSTMAN](#Коллекции-POSTMAN)
 
 ## Описание проекта
 https://dummyapi.io/ представляет собой сервис для тестирования API. Для выполнения запросов неоходимо app-id, который генерируется автоматически после регистрации на сайте. В качестве тестирования был взят объект **POST**
@@ -76,6 +74,7 @@ owner: string(User id)
 
 ## Коллекция POSTMAN
 Данная коллекция представляет собой наборн тестов для тестирования POST. Подробная проверка расписана для **Get List** и **Create Post**.
-![Коллекции POSTMAN](https://drive.google.com/file/d/1iolzvRklsCBQ57ZGKxH5Aw72dwsxG2uI/view?usp=sharing "KP")
-![Local.environment POSTMAN](https://drive.google.com/file/d/11wcfXX2w2pOGdes2a2vPuHt01aVGK6Wx/view?usp=sharing "EP")
-Также майнд-карту можно [скачать](https://drive.google.com/file/d/1iolzvRklsCBQ57ZGKxH5Aw72dwsxG2uI/view?usp=sharing)
+![Коллекции POSTMAN](https://github.com/TanyaGL11/DummyAPI/blob/main/POST.postman_collection.json "KP")
+![Local.environment POSTMAN](https://github.com/TanyaGL11/DummyAPI/commit/78f28d65cbf00de0d3b7b4981587f6a44e7fbce0 "EP")
+Также коллекцию можно [скачать](https://github.com/TanyaGL11/DummyAPI/blob/main/POST.postman_collection.json)
+Также environment можно [скачать](https://github.com/TanyaGL11/DummyAPI/commit/78f28d65cbf00de0d3b7b4981587f6a44e7fbce0)
